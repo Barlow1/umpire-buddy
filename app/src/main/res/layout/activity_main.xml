@@ -7,12 +7,12 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
         android:text="@string/Title"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,8 @@
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
         android:layout_marginBottom="128dp"
-        android:text="Strike"
+        android:text="@string/strike"
+        android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -34,7 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
-        android:text="Ball"
+        android:text="@string/ball"
+        android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="@+id/strike_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/strike_button" />
@@ -47,7 +49,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginBottom="44dp"
         android:text="0"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/strike_button"
         app:layout_constraintStart_toStartOf="@+id/strike_button" />
 
@@ -59,7 +61,7 @@
         android:layout_marginRight="35dp"
         android:layout_marginBottom="44dp"
         android:text="0"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/ball_button"
         app:layout_constraintEnd_toEndOf="@+id/ball_button" />
 
@@ -68,8 +70,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="104dp"
-        android:text="Strike"
-        android:textSize="30dp"
+        android:text="@string/strike"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/strike_button"
         app:layout_constraintEnd_toStartOf="@+id/ball_text"
         app:layout_constraintHorizontal_bias="0.306"
@@ -82,8 +84,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="104dp"
-        android:text="Ball"
-        android:textSize="30dp"
+        android:text="@string/ball"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/ball_button"
         app:layout_constraintEnd_toEndOf="@+id/ball_button" />
 
@@ -91,7 +93,7 @@
         android:id="@+id/clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear"
+        android:text="@string/clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,11 +104,23 @@
         android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <ImageButton
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toStartOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:srcCompat="@android:drawable/ic_menu_info_details"
+        style="?android:attr/borderlessButtonStyle"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
